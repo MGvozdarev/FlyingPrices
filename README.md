@@ -55,7 +55,6 @@ def get_date(message, departure, destination):
             'one_way': 'true',  # Билеты в одну сторону
         }
         response = requests.get(AVIASALES_API_URL, params=payload)
-
         if response.status_code == 200:
             data = response.json()
             if data['data']:
